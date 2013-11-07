@@ -1,0 +1,747 @@
+<head>
+		<meta charset="utf-8">
+
+		<title>Responsive Nut's & Bolts</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/custom-theme.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css" id="theme">
+
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+
+<!-- new slide ========================================= -->
+
+
+				<section>
+					<h1>In the Weeds</h1>
+					<p>Nuts & Bolts of developing a <strong>Responsive Website</strong><p>
+						<small>Joe Maag / <a href="http://twitter.com/jswitchback">@jswitchback</a></small>
+					</p>
+				</section>
+
+
+<!-- new slide ========================================= -->
+
+
+				<section data-transition="zoom" data-state="bgrd-alternate-4 topic-1">
+					<section>
+						<h1>Vertical Rhythm</h1>
+							<p>Simply setting expectation.</p>
+							<ul class="fragment large-link-wrpr">
+								<li><a href="http://ribot.co.uk/">Example</a></li>
+								<li><a href="http://naomiatkinson.com/">Example</a></li>
+								<li><a href="http://thepaintdrop.com/">Example</a></li>
+							</ul>
+					</section>
+
+					<section>
+						<h2>A Good Tempo</h2>
+						<p class="fragment">It starts at the line-height. <a href="http://alistapart.com/">http://alistapart.com/</a>
+						</p>
+						<p class="fragment">As a general rule, line-height should be about 1.5
+						</p>
+					</section>
+
+					<section>
+						<pre><code data-trim contenteditable>
+ html {
+
+  font-size: 100%; 
+ /* Sets the base relative font size. 
+    Equivalent to 16px on most browsers. */
+ 
+ }
+
+ body {
+  line-height: 1.5;
+ }
+					</code></pre>
+					</section>
+
+					<section data-transition="none" class="baseline-slide">
+						<h1>GET RHYTHM</h1>
+						<p class="fragment">You'd love for it to have some magical scroll tempo.
+						</p>
+						<p class="fragment font-small">But not every element is a multiple of your baseline height</p>
+					</section>
+
+					<section class="baseline-slide baseline-grid">
+						<h1>GET RHYTHM</h1>
+						<p>You'd love for it to have some magical scroll tempo.
+						</p>
+						<p>But not every element is a multiple of your baseline height</p>
+					</section>
+
+					<section>
+						<pre><code data-trim contenteditable>
+ .baseline-grid {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, #000000), color-stop(5%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: -moz-linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: -o-linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  -webkit-background-size: 100% 24px;
+  -moz-background-size: 100% 24px;
+  -o-background-size: 100% 24px;
+  background-size: 100% 24px;
+  background-position: left top;
+ }
+					</code></pre>
+					</section>
+
+					<section>
+					<pre><code data-trim contenteditable>
+ .baseline-grid {
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, #000000), color-stop(5%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: -moz-linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: -o-linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(bottom, #000000 5%, rgba(0, 0, 0, 0) 5%);
+  -webkit-background-size: 100% 1.5em;
+  -moz-background-size: 100% 1.5em;
+  -o-background-size: 100% 1.5em;
+  background-size: 100% 1.5em;
+  background-position: left top;
+ }
+					</code></pre>
+					</section>
+
+					<section class="baseline-slide">
+						<h1>GET RHYTHM</h1>
+						<p>You'd love for it to have some magical scroll tempo.
+						</p>
+						<p class="font-small">But not every element is a multiple of your baseline height</p>
+					</section>
+
+					<section>
+					<pre><code contenteditable>
+
+ h1.coveted-title {
+	margin-bottom: 10px;
+ }
+
+ p.on-the-fly-font-changes {
+	margin-bottom: 17px;
+ }
+
+					</code></pre>
+					</section>
+
+					<section class="baseline-slide fixed baseline-grid">
+						<h1>GET RHYTHM</h1>
+						<p>You'd love for it to have some magical scroll tempo.
+						</p>
+						<p class="font-small">But not every element is a multiple of your baseline height</p>
+					</section>
+
+					<section class="baseline-slide fixed">
+						<h1>GET RHYTHM</h1>
+						<p>You'd love for it to have some magical scroll tempo.
+						</p>
+						<p class="font-small">But not every element is a multiple of your baseline height</p>
+					</section>
+
+					<section>
+						<p>All page elements <em>should</em> follow the rhythm.</p>
+						 <h4 class="rhythm-title">Heading Titles</h4>
+						<ul class="blocks">
+						 <li class="block"> Blocks</li><li class="block">of</li><li class="block last">everything.</li>
+						</ul>
+						 <div class="region">Regions like banners, content areas and footers</div>
+						 <p><a class="rhythm-button" href="">Call to Action links</a></p>
+					</section>
+				</section>
+
+
+<!-- new slide ========================================= -->
+				<section data-transition="zoom" data-state="bgrd-alternate-2 topic-2">
+					<section>
+						<h1>Media Queries</h1>
+						<p>A browser's device detection.</p>
+					</section>
+
+					<section>
+						<h3>Some things you can detect:</h3>
+						<ul>
+							<li class="fragment roll-in center">orientation</li>
+							<li class="fragment roll-in center">aspect-ratio (e.g. 16/9)</li>
+							<li class="fragment roll-in center">color</li>
+							<li class="fragment roll-in center">device-aspect-ratio</li>
+							<li class="fragment roll-in center">resolution</li>
+							<li class="fragment roll-in center">device-height</li>
+							<li class="fragment roll-in center">device-width</li>
+							<li class="fragment roll-in center">height</li>
+							<li class="fragment roll-in center"><strong class="highlighted">width</strong></li>
+						</ul>
+					</section>
+
+					<section>
+						<h4>From a link element:</h4>
+						<pre><code style="word-wrap:break-word;font-size: 16px;">
+ <link rel="stylesheet" media="all" href="css/base.css" />
+ <link rel="stylesheet" media="(min-width: 760px)" href="css/tablet-portrait.css" />
+ <link rel="stylesheet" media="(min-width: 960px)" href="css/desktop.css" />
+						</code></pre>
+					</section>
+
+					<section>
+						<h4>From within a stylesheet:</h4>
+						<pre><code style="word-wrap:break-word;font-size: 16px;">
+ // Base styles
+ .desktop_nav {
+  display: none;
+ }
+
+ // Widescreen 60em / 960px
+ @media (min-width: 60em) { 
+  .desktop_nav {
+    display: block;
+  }
+  .mobile_nav {
+  	display: none;
+  }
+ } // End min-60em/960px media query
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Deciding on breakpoints</h2>
+					</section>
+
+					<section>
+						<p class="font-small">iPhone 3-4</p>
+						<p>320 x 480 </p>
+						<p class="font-small">iPhone 5</p>
+						<p>320 x 568</p>
+						<p class="font-small">Samasung Galaxy S3-4</p>
+						<p>360 x 640 </p>
+						<p class="font-small">iPad</p>
+						<p>1024 x 768</p>
+					</section>
+
+					<section>
+						<p class="font-small">layout minimum-width</p>
+						<p>320px = 20em</p>
+						<p class="font-small">x-small (phone-landscape)</p>
+						<p>480px = 30em</p>
+						<p class="font-small">small (tablet-landscape)</p>
+						<p>600px = 37.5em</p>
+						<p class="font-small">medium (tablet-portrait)</p>
+						<p>760px = 47.5em</p>
+						<p class="font-small">large (tablet-landscape)</p>
+						<p>960px = 60em</p>
+					</section>
+
+					<section>
+						<h2>Breakpoints are cheap.</h2>
+						<p>Start with a set of breakpoints that guided the design, but add media queries as needed at any width, height, resolution, etc.</p>
+					</section>
+
+					<section>
+						<h4>Mobile first ~ <a href="http://www.lukew.com/">Luke Woblewski</a></h4>
+						<pre><code>
+ // Styles not wrapped in media queries first
+ body {
+  min-width: 20em;
+  max-width: 64em;
+ }
+ // 480px
+ @media (min-width: 30em) { 
+ } 
+ // 600px
+ @media (min-width: 37.5em) { 
+ } 
+ // 760px
+ @media (min-width: 47.5em) { 
+ } 
+ // 960px
+ @media (min-width: 60em) { 
+ } 
+						</code></pre>
+					</section>
+
+					<section>
+						<h4>First floats show at tablet widths</h4>
+						<pre><code> 
+ // 760px begins two column layout
+ @media (min-width: 47.5em) { 
+  #content {
+   width: 66.66666%;
+   float: left;
+  }
+  #left-sidebar {
+   width: 33.33333%;
+   float: left;
+  }
+ } 
+						</code></pre>
+					</section>
+
+					<section>
+						<pre><code> 
+ // 760px begins two column layout
+ @media (min-width: 47.5em) { 
+  #content {
+   width: 66.66666%;
+   padding: 1.5em;
+   float: left;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+  }
+  ...
+ } 
+						</code></pre>
+						<p>ie6/7 box-sizing polyfill <a href="https://github.com/Schepp/box-sizing-polyfill">https://github.com/Schepp/box-sizing-polyfill</a></p>
+					</section>
+
+					<section>
+						<h3>Left to their own devices</h3>
+						<p>Android, iPhone, and Windows Phone 7 set viewport width to a desktop width.</br> IPhone and iPod touch use 980 pixels, while Windows Phone 7 uses 1024 pixels. </p>
+						<pre class="fragment roll-in"><code>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+						</code></pre>
+					</section>
+
+					<section>
+						<p>Have a damn good reason if you do this!</p>
+						<div class="fragment roll-in">
+						<pre><code>
+ <... content="width=device-width, initial-scale=1, user-scalable=no">
+						</code></pre>
+						<p class="resource-link"><a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">https://developer.apple.com/library/ios/documentation/...</a></p>
+						</div>
+					</section>
+
+					<section>
+						<p>Responsive Images</p>
+						<pre><code contenteditable style="word-wrap:break-word;font-size: 16px;">
+ img {
+  /* Responsive images */
+  max-width: 100%;
+  height: auto;
+  /* Correct IE 8 not scaling image height when resized. */
+  width: auto\9;
+ }
+						</code></pre>
+					</section>
+					<section>
+						<p>Responsive Video Embed</p>
+						<pre><code style="word-wrap:break-word;font-size: 16px;">
+ /* Responsive video embed. Youtube / Vimeo */
+ .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+ }
+ .video-container iframe,
+ .video-container object,
+ .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ }
+						</code></pre>
+						<p class="fragment"><a href="http://fitvidsjs.com/">Fitvids</a></p>
+					</section>
+
+					<section>
+						<h3>The elephant in the room...</h3>
+						<h1 class="fragment">ie8</h1>
+						<h3 class="fragment">:(</h3>
+					</section>
+
+					<section>
+						<h3>Media queries are not new, </br>except to Internet Explorer.</h3>
+						<p>IE 6-8 will need special care.</p>
+					</section>
+
+					<section>
+						<h3>Fallback Options for ie8</h3>
+						<ol>
+						<li class"fragment">Desktop first</li>
+						<li class"fragment">Rewrite desktop styles, stripped of media queries</li>
+						<li class"fragment">Respond.js to polyfill missing media query feature in IE 6-8<p class="font-small"><a href="https://github.com/scottjehl/Respond">https://github.com/scottjehl/Respond</a><p></li>
+						</ol>
+					</section>
+
+				</section>
+
+
+<!-- new slide ========================================= -->
+
+
+				<!-- Example of nested vertical slides -->
+				<section data-transition="zoom" data-state="bgrd-alternate-3 topic-3">
+
+					<section data-transition="zoom">
+						<h1>Navigation Patterns</h1>
+						<p>
+							<ul class="fragment">
+							<li class="center"><a href="http://bradfrostweb.com/blog/web/responsive-nav-patterns/">Basic</a></li>
+							<li class="center"><a href="http://bradfrostweb.com/blog/web/complex-navigation-patterns-for-responsive-design/">Complex</a></li>
+							<li class="center"><a href="http://bradfrost.github.io/this-is-responsive/patterns.html">Roundup</a></li>
+						</p>
+					</section>
+					
+					<section data-transition="zoom">
+						<h3>Navigation Plugins</h3>
+						<ul>
+						<li class="center">
+							<a href="http://tinynav.viljamis.com/">http://tinynav.viljamis.com/</a>
+						</li>
+						<li  class="center">
+							<a href="http://responsive-nav.com/">http://responsive-nav.com/</a>
+						</li>
+						</ul>
+					</section>
+
+				</section>
+
+
+<!-- new slide ========================================= -->
+
+
+				<section data-transition="default" data-state="bgrd-alternate-1 topic-4">
+					<section>
+					<h2>Make you life easier tips:</h2>
+				</section>
+
+				<section>
+					<p style="text-align:left;">TIP 1</p>
+					<h3>Get help with your CSS</h3>
+					<ul>
+						<li class="fragment center">
+						<p>CSS Preprocessor</p>
+							<a href="http://sass-lang.com/">SASS</a>
+						</li>
+						<li class="fragment center">
+						<p>Predefined Chuncks of CSS</p>
+							<a href="http://compass-style.org/">COMPASS</a>
+						</li>
+						<li class="fragment center">
+							<a href="http://bourbon.io/">BOURBON</a>
+						</li>
+						<li class="fragment center">
+						<p>Easier custom grids</p>
+							<a href="http://freqdec.github.io/slabText/">SUSY GRIDS</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<p style="text-align:left;">TIP 2</p>
+					<h2>Selectivizr</h2>
+					<p>Polyfill for CSS3 in IE</p>
+					<p><a href="http://selectivizr.com/">http://selectivizr.com/</a>
+					</p>
+				</section>
+
+				<section>
+					<p style="text-align:left;">TIP 3</p>
+					<h2>Modernizr</h2>
+					<p>Feature Detection</p>
+					<p><a href="http://modernizr.com/">http://modernizr.com/</a></p>
+				</section>
+
+				<section>
+						<p>You can also conditionally load javasript or run code: </p>
+						<pre><code style="word-wrap:break-word;font-size: 16px;">
+ if (Modernizr.touch) {
+  	// Touch screen
+  } else {
+  	// Non-touch code
+  }
+ }
+
+ // With Moderizr.load you can conditionally load files
+ yepnope({
+  test : Modernizr.touch,
+  yep  : 'normal.js',
+  nope : ['polyfill.js', 'wrapper.js']
+ });
+						</code></pre>
+				</section>
+
+				<section>
+						<p>Or just use it in css</p>
+						<pre><code>
+ html.touch .submit-btn {
+  height: 44px;
+  line-height: 44px;
+  padding-left: 2em;
+  padding-right: 2em;
+ }
+						</code></pre>
+				</section>
+
+				<section>
+					<p style="text-align:left;">TIP 4</p>
+					<h3>A few plugins to chew on.</h3>
+					<ul>
+						<li class="fragment center">
+							<a href="http://retinajs.com/">Retina JS</a>
+						</li>
+						<li class="fragment center">
+							<a href="http://fittextjs.com/">Fit Text</a>
+						</li>
+						<li class="fragment center">
+							<a href="http://freqdec.github.io/slabText/">Slab Text</a>
+						</li>
+						<li class="fragment center">
+							<a href="http://fitvidsjs.com/">Fitvids</a>
+						</li>
+						<li class="fragment center">
+							<a href="http://flexslider.woothemes.com/">Flexslider</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<p style="text-align:left;">TIP 5</p>
+					<h3>Get to know front-end frameworks.</h3>
+					<ul class="fragment">
+						<li class="center">
+							<a href="http://getbootstrap.com/">Twitter Bootstrap</a>
+						</li>
+						<li class="center">
+							<a href="http://foundation.zurb.com/">Foundation</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Comparison:</h3>
+					<ul>
+						<li><a href="http://responsive.vermilion.com/compare.php">http://responsive.vermilion.com/compare.php</a></li>
+						<li><a href="http://usablica.github.io/front-end-frameworks/compare.html">http://usablica.github.io/front-end-frameworks/compare.html</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<p style="text-align:left;">TIP 6</p>
+
+						<p>If you want that sales presentation browser resize.</br> You'll need the javascript resize event.<p>
+						<pre class="fragment"><code style="word-wrap:break-word;font-size: 16px;">
+ $(window).resize(function() {
+
+  $('#slideshow').cycle('destroy').cycle();
+
+  var width = $(window).width();
+  if (width < 480) {
+   $('body').addClass('mobile'); 
+  }
+  else {
+   $('body').removeClass('mobile')
+  }
+ });
+
+ // https://github.com/louisremi/jquery-smartresize
+
+						</code></pre>
+				</section>
+
+				<section>
+					<p style="text-align:left;">TIP 7</p>
+
+						<p>Use <strong>enquire.js</strong> for more advanced js behaviors across media queries.<p>
+						<p><a href="http://wicky.nillia.ms/enquire.js/">http://wicky.nillia.ms/enquire.js/</a>
+				</section>
+
+				<section>
+						<pre><code style="word-wrap:break-word;font-size: 16px;">
+ enquire.register("screen and (max-width:30em)", {
+
+    match : function() {
+     $('body').addClass('mobile'); 
+    },      
+                                
+    unmatch : function() {
+     $('body').removeClass('mobile'); 
+    },    
+    
+    setup : function() {},    
+                                
+    destroy : function() {}
+      
+ });
+
+						</code></pre>
+				</section>
+
+				<section>
+						<pre><code style="word-wrap:break-word;font-size: 16px;">
+ enquire.register("screen and (min-width: 45em)", {
+
+    setup : function() {
+        // load content via AJAX
+    },
+    match : function() {
+        // show sidebar
+    },
+    unmatch : function() {
+        // hide sidebar
+    }  
+
+ });
+						</code></pre>
+				</section>
+
+				<section>
+						<p style="text-align:left;">TIP 8</p>
+
+						<p>Mobile brings HD Displays (Retina). CSS3 them larger images.</p>
+						<pre><code style="word-wrap:break-word;font-size: 16px;">
+ // Standard Definition styles
+ a.logo {
+  background-image: url(../images/logo1x.png);
+ }
+
+ // HD Displays (aka Retina)
+ @media
+ only screen and (-webkit-min-device-pixel-ratio: 2),
+ only screen and (   min--moz-device-pixel-ratio: 2),
+ only screen and (     -o-min-device-pixel-ratio: 2/1),
+ only screen and (        min-device-pixel-ratio: 2),
+ only screen and (                min-resolution: 192dpi),
+ only screen and (                min-resolution: 2dppx) { 
+  
+  a.logo {
+   background-image: url(../images/logo2x.png);
+   background-size: 200px 120px;
+
+ } 
+ } // End HD media query
+						</code></pre>
+						<p><a href="http://css-tricks.com/snippets/css/retina-display-media-query/">http://css-tricks.com/snippets/css/retina-display-media-query/</a></p>
+					</section>
+
+				<section>
+					<p style="text-align:left;">TIP 9</p>
+					<p>Keep your ears to the tracks.</p>
+					<h3>Responsive is constantly evolving.</h3>
+					<ul>
+						<li><a href="http://www.smashingmagazine.com/">http://www.smashingmagazine.com</a></li>
+						<li><a href="http://uptodate.frontendrescue.org/">http://uptodate.frontendrescue.org</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<p style="text-align:left;">TIP 10</p>
+					<h3>Get a general sense of mobile through the browser, but....</h3>
+					<ul>
+						<li><p  class="center">Chrome != iPhone (min-width capped at 400px)</p></li>
+						<li><p  class="center">Firefox = iPhone</p></li>
+					</ul>
+					
+					
+				</section>
+
+				<section>
+					<p style="text-align:left;">TIP 11</p>
+					<h3>Take advantage of the device lab for cross-browser testing.</h3>
+					<ul>
+						<li><a href="http://www.opengr.org/">http://www.opengr.org</a></li>
+					</ul>
+					
+					
+				</section>
+
+
+
+				</section>
+
+
+<!-- new slide ========================================= -->
+
+
+				<section>
+
+					<section>
+					<h2>Get inspired!</h2>
+					<ul>
+						<li class="center"><a href="http://mediaqueri.es/">http://mediaqueri.es/</a></li>
+						<li class="center"><a href="https://www.awwwards.com/websites/responsive-design/">https://www.awwwards.com/websites/responsive-design/</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Questions?</h1>
+					<p>jswitchback on github</p>
+					<p>jmaag@rapiddg.com</p>
+				</section>
+
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="js/custom.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
