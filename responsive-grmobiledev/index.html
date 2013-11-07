@@ -3,8 +3,8 @@
 
 		<title>Responsive Nut's & Bolts</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Presentation on Responsive Front-End Dev">
+		<meta name="author" content="Joe Maag">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -12,19 +12,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/custom-theme.css" id="theme">
 		<link rel="stylesheet" href="css/custom.css" id="theme">
 
-
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -58,9 +56,9 @@
 						<h1>Vertical Rhythm</h1>
 							<p>Simply setting expectation.</p>
 							<ul class="fragment large-link-wrpr">
-								<li><a href="http://ribot.co.uk/">Example</a></li>
-								<li><a href="http://naomiatkinson.com/">Example</a></li>
-								<li><a href="http://thepaintdrop.com/">Example</a></li>
+								<li><a href="http://ribot.co.uk/">http://ribot.co.uk/</a></li>
+								<li><a href="http://naomiatkinson.com/">http://naomiatkinson.com/</a></li>
+								<li><a href="http://thepaintdrop.com/">http://thepaintdrop.com/</a></li>
 							</ul>
 					</section>
 
@@ -268,7 +266,7 @@
 					</section>
 
 					<section>
-						<h4>Mobile first ~ <a href="http://www.lukew.com/">Luke Woblewski</a></h4>
+						<h4>Mobile first ~ <a href="http://www.lukew.com/">http://www.lukew.com/</a></h4>
 						<pre><code>
  // Styles not wrapped in media queries first
  body {
@@ -341,7 +339,7 @@
 						<pre><code>
  <... content="width=device-width, initial-scale=1, user-scalable=no">
 						</code></pre>
-						<p class="resource-link"><a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">https://developer.apple.com/library/ios/documentation/...</a></p>
+						<p class="resource-link"><a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html</a></p>
 						</div>
 					</section>
 
@@ -414,9 +412,9 @@
 						<h1>Navigation Patterns</h1>
 						<p>
 							<ul class="fragment">
-							<li class="center"><a href="http://bradfrostweb.com/blog/web/responsive-nav-patterns/">Basic</a></li>
-							<li class="center"><a href="http://bradfrostweb.com/blog/web/complex-navigation-patterns-for-responsive-design/">Complex</a></li>
-							<li class="center"><a href="http://bradfrost.github.io/this-is-responsive/patterns.html">Roundup</a></li>
+							<li class="center"><a href="http://bradfrostweb.com/blog/web/responsive-nav-patterns/">http://bradfrostweb.com/blog/web/responsive-nav-patterns/</a></li>
+							<li class="center"><a href="http://bradfrostweb.com/blog/web/complex-navigation-patterns-for-responsive-design/">http://bradfrostweb.com/blog/web/complex-navigation-patterns-for-responsive-design/</a></li>
+							<li class="center"><a href="http://bradfrost.github.io/this-is-responsive/patterns.html">http://bradfrost.github.io/this-is-responsive/patterns.html</a></li>
 						</p>
 					</section>
 					
@@ -449,18 +447,18 @@
 					<ul>
 						<li class="fragment center">
 						<p>CSS Preprocessor</p>
-							<a href="http://sass-lang.com/">SASS</a>
+							<a href="http://sass-lang.com/">http://sass-lang.com/</a>
 						</li>
 						<li class="fragment center">
 						<p>Predefined Chuncks of CSS</p>
-							<a href="http://compass-style.org/">COMPASS</a>
+							<a href="http://compass-style.org/">http://compass-style.org/</a>
 						</li>
 						<li class="fragment center">
-							<a href="http://bourbon.io/">BOURBON</a>
+							<a href="http://bourbon.io/">http://bourbon.io/</a>
 						</li>
 						<li class="fragment center">
 						<p>Easier custom grids</p>
-							<a href="http://freqdec.github.io/slabText/">SUSY GRIDS</a>
+							<a href="http://freqdec.github.io/slabText/">http://freqdec.github.io/slabText/</a>
 						</li>
 					</ul>
 				</section>
@@ -516,19 +514,19 @@
 					<h3>A few plugins to chew on.</h3>
 					<ul>
 						<li class="fragment center">
-							<a href="http://retinajs.com/">Retina JS</a>
+							<a href="http://retinajs.com/">http://retinajs.com/</a>
 						</li>
 						<li class="fragment center">
-							<a href="http://fittextjs.com/">Fit Text</a>
+							<a href="http://fittextjs.com/">http://fittextjs.com/</a>
 						</li>
 						<li class="fragment center">
-							<a href="http://freqdec.github.io/slabText/">Slab Text</a>
+							<a href="http://freqdec.github.io/slabText/">http://freqdec.github.io/slabText/</a>
 						</li>
 						<li class="fragment center">
-							<a href="http://fitvidsjs.com/">Fitvids</a>
+							<a href="http://fitvidsjs.com/">http://fitvidsjs.com/</a>
 						</li>
 						<li class="fragment center">
-							<a href="http://flexslider.woothemes.com/">Flexslider</a>
+							<a href="http://flexslider.woothemes.com/">http://flexslider.woothemes.com/</a>
 						</li>
 					</ul>
 				</section>
@@ -538,10 +536,10 @@
 					<h3>Get to know front-end frameworks.</h3>
 					<ul class="fragment">
 						<li class="center">
-							<a href="http://getbootstrap.com/">Twitter Bootstrap</a>
+							<a href="http://getbootstrap.com/">http://getbootstrap.com/</a>
 						</li>
 						<li class="center">
-							<a href="http://foundation.zurb.com/">Foundation</a>
+							<a href="http://foundation.zurb.com/">http://foundation.zurb.com/</a>
 						</li>
 					</ul>
 				</section>
