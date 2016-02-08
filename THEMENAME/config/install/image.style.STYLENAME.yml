@@ -1,0 +1,7 @@
+# Official how to:
+# https://www.drupal.org/node/2356753
+
+# Quick how to
+# Create the Image Style you wish to include using the UI
+# Export the Image Style as YAML
+# Include the exported YAML in the config/install directory of your theme following the appropriate naming convention.

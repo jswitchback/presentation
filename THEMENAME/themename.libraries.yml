@@ -1,0 +1,61 @@
+# Related docs:
+# https://www.drupal.org/node/2216195
+
+global-css:
+  css:
+    theme:
+      build/css/global.css: {}
+      # Example passing <link> attribute
+      # build/css/print.css: { media: print }
+
+global-js:
+  js:
+    # header: true # Uncomment to load in header
+    build/js/global.js: {}
+
+  dependencies:
+   #- core/drupal # Includes Drupal Behaviors!
+   - core/jquery
+   - core/jquery.once
+
+   # Other core js from core/assets/
+   # -backbone
+   # ckeditor
+   # classList
+   # domready
+   # farbtastic
+   # html5shiv
+   # jquery
+   # jquery-form
+   # jquery-joyride
+   # jquery-once
+   # jquery-ui-touch-punch
+   # jquery.cookie
+   # jquery.ui
+   # matchMedia
+   # modernizr
+   # normalize-css
+   # picturefill
+   # underscore
+
+
+
+
+# Example: "extend"
+# dialog:
+#   version: VERSION
+#   css:
+#     component:
+#       css/dialog.css: { weight: -10 }
+# file:
+#   version: VERSION
+#   css:
+#     component:
+#       css/file.css: { weight: -10 }
+
+
+
+# Example: Added in themename.theme (preprocess function)
+# fancy-effect:
+#   js:
+#     js/fancy.js: {}

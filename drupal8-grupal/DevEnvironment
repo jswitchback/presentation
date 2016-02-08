@@ -1,0 +1,134 @@
+DRUPAL 8 NOTES:
+
+
+PHP --------------
+
+
+Requires PHP 5.5.9 (or greater)
+For better security support it is recommended to update to at least 5.5.21 or 5.6.5.
+
+
+DRUSH --------------
+
+
+** Drush must be version 8. Here's an article to run mutliple versions.
+My install updates the default "drush" command for version 8 instead of using "drush8"
+https://www.lullabot.com/articles/switching-drush-versions
+Note: requires php5.4+ (Update to Mac OS 10.11 El Capitan or Google how to upgrade without a new OS)
+
+Changes to Drush
+drush cc all becomes drush cr (drush cache rebuild)
+
+Short list of changes from 7 to 8 (drush cr & drush config ... Many more additions were previously added from version 6 to 7)
+https://docs.acquia.com/articles/leveraging-drush-8-drupal-8
+
+Drush command reference
+http://drushcommands.com/drush-8x/cache/cache-clear/
+
+Drupal 8 Core examples
+https://www.drupal.org/project/examples
+
+Drupal 8 tutorial list
+http://redcrackle.com/blog/drupal-8/free-tutorials-list
+
+
+THEME --------------
+
+
+General theming docs
+https://www.drupal.org/theme-guide/8
+
+Opposing base themes: Classy vs. Stable
+Change the base theme in the info.yml file to inherit there template overrides
+base theme: classy
+base theme: stable
+base theme: false #no base theme // If this line is missing it defaults to Stable
+
+Classes are determined in the template itself. So no need to do an array_diff to remove core classes. Just override the core template.
+
+https://www.lullabot.com/articles/a-tale-of-two-base-themes-in-drupal-8-core
+Note: Bartik & Seven use Classy as their base theme
+
+
+TWIG --------------
+
+
+Docs
+http://twig.sensiolabs.org/documentation
+
+Drupal template naming conventions
+https://www.drupal.org/node/2354645
+
+Drupal side by side comparison with PHP templates
+https://www.drupal.org/node/1918824
+
+Drupal debug
+https://www.drupal.org/node/1906392
+
+
+CSS -------------
+
+
+First and last classes removed. Now selected with css
+https://www.drupal.org/node/2178215
+
+CSS naming follows BEM & SMACCS
+https://www.drupal.org/node/1887918
+
+
+JS ---------------
+
+
+Added HTML classes used solely for targeting with javascript. Prefixed with "js-". Do not style these classes.
+
+Attach js in theme library, hook, or in twig template
+https://www.drupal.org/theme-guide/8/assets
+
+
+SETTINGS.PHP -------------
+
+
+Drupal 8 ships with a sites/example.settings.local.php file. It hard-codes the performance settings to off, so is extremely useful in a development environment. Simply copy it and rename it as sites/default/settings.local.php and uncomment the following lines in sites/default/settings.php:
+
+<?php
+# if (file_exists(__DIR__ . '/settings.local.php')) {
+#   include __DIR__ . '/settings.local.php';
+# }
+?>
+
+
+BROWSER SUPPORT ------------
+
+
+IE 6/7/8 and Android 2.3 (Any browser without SVG capabilities is not supported)
+
+
+CORE FILE STRUCTURE ----------
+
+core:
+This contains all of drupal core except for things that must be in the root, like index.php etc. Generally you shouldn't need to be adding/editing/removing anything in here.
+
+themes:
+This is where you put your site's themes (previously sites/all/themes).
+
+modules:
+This is where you put your site's modules (previously sites/all/modules).
+
+profiles:
+This is where you put installation profiles.
+
+sites: This is used for running drupal multi-site setups and is used in the same way as in drupal 7. Modules & themes in sites/all/modules or sites/all/themes, will override ones in the base modules & themes directories. Modules in sites/SITENAME/modules and sites/SITENAME/themes will override others for the given site.
+
+
+
+THEME NECESSITIES:
+
+Tooltip
+Modal (Is drupal modal enough?)
+collapse on mobile with "read more"
+Slideshow / carousel
+mobile menu (accordion, collapse, modal)
+responsive typography, double size on desktop?
+
+
+

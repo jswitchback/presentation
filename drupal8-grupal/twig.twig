@@ -1,0 +1,183 @@
+https://www.drupal.org/node/1823416
+
+
+All theme_* functions replaced by Twig templates
+
+Process functions removed, preprocess functions still intact for manupulating the data before rendering in a template
+
+Autoescaped by default
+
+Use raw data with Twig filter "  | raw"
+
+Templates compiled once and stored in sites/default/files/php/twig until Twig cache is cleared
+
+
+
+/////////////////
+// Comments
+/////////////////
+
+
+
+{#
+
+Comment block here
+
+#}
+
+
+
+/////////////////
+// Variables
+////////////////
+
+
+
+{{ foo }}
+
+
+
+///////////////////
+// Expressions
+///////////////////
+
+
+
+// If statement
+
+{% if foo %}
+
+  <div>{{ foo }}</div>
+
+{% endif %}
+
+
+// Loop without keys
+
+{% for item in navigation %}
+    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+{% endfor %}
+
+
+// Loop with keys
+
+{% for value, key in items %}
+  <div class="{{ key }}">{{ value }}</div>
+{% endfor %}
+
+
+// Setting variables
+
+{% text = '!person is a Twig fan'|t('!person', user) %}
+
+
+
+///////////////////////
+// Filters
+//////////////////////
+** DO NOT PUT A SPACE BEFORE OR AFTER THE PIPE
+
+
+// without
+
+{{ content|without('links') }} // Prints everything in the content variable except content.links
+
+
+// clean_class
+
+{{ 'my class'|clean_class }}
+
+
+// clean_id
+
+{{ 'my id'|clean_id }}
+
+
+// safe_join
+
+{{ items|safe_join(', ') }} // Joins several strings together with a supplied separator
+
+
+// format_date
+
+{{ TIMESTAMP|format_date }} // Defaults to "medium"
+
+
+// t (function)
+
+{{ 'Original'|t }}
+
+
+// length  ... returns the number of items of a sequence or mapping, or the length of a string.
+// lower   ... converts a value to lowercase.
+// upper   ... converts a value to uppercase.
+
+
+
+///////////////////////
+// Functions
+//////////////////////
+
+
+// url($name, $parameters, $options)
+
+<a href="{{ url('view.frontpage.page_1') }}">{{ 'View all content'|t }}</a>
+
+
+// link($text, $url, $attributes)
+
+{{ link('title', 'home', { 'class':['foo', 'bar', 'baz']} ) }}
+
+
+// file_url($uri)
+
+{{ file_url(node.field_example_image.entity.uri.value) }} // relative path from the root and creates an absolute path to the file
+
+
+// attach_library($library)
+
+{{ attach_library('classy/node') }} // $library = THEMEorMODULENAME / LIBRARYNAME
+
+
+
+
+//////////////////////////
+// Miscellaneous
+/////////////////////////
+
+
+
+// Including partial templates ... /THEME_NAME/includes/header.html.twig
+
+{% include directory ~ '/includes/header.html.twig' %}
+
+
+// Attributes ... can be printed individually
+
+<div id="{{ attributes.id }}" class="{{ attributes.class }}"{{ attributes }}>
+  {{ content }}
+</div>
+
+
+//////////////////////
+// Debug
+/////////////////////
+
+** Set debug to true in sites/default/default.services.yml
+
+// Only print the available keys
+
+{{ dump(\_context|keys) }}
+
+// Show all
+
+{{ dump() }}
+
+
+// Prettier vsriable pront with Devel and Kint
+
+ kint()
+
+
+
+

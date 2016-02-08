@@ -1,0 +1,28 @@
+Drupal 8 file structure
+
+ - Core files are now in "core"
+ - Contrib/Custom themes go in "themes" and "modules" folder
+ - "Sites/all" & "default" still work but are best used on multisites (domain specific folders will get precedent)
+
+
+Theme file changes
+  THEMENAME.info.yml
+  THEMENAME.libraries.yml
+    -- themes are encouraged to create a library per component/topic/logical unit and hence are encouraged to not load all their CSS on all pages anymore, but to attach it when appropriate in a preprocess hook and/or only on the relevant pages via hook_page_attachments_alter()
+
+
+  THEMENAME.theme (template.php)
+
+New core base themes
+
+  - Classy & Stable
+  - Differences in class output
+
+
+Misc Notes
+  - No more first, last, odd, even classes. Left to CSS psuedo-selectors
+  - Admin theme no longer compatible with ie8 and Android 2.3 (Background SVG)
+  - Added HTML classes used solely for targeting with javascript. Prefixed with "js-". Do not style these classes.
+
+
+
